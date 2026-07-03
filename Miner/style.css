@@ -1,0 +1,670 @@
+/* Clean, Light Minimalist Styling Base Layer */
+body {
+    background-color: #f4f6f8;
+    color: #2d3748;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cheat-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 32, 44, 0.96);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+}
+
+.cheat-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.cheat-box h2 {
+    color: #e53e3e;
+}
+
+.anti-cheat-signature {
+    font-style: italic;
+    color: #a0aec0 !important;
+    font-size: 13px;
+}
+
+.cheat-box button {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+/* Profile Branding Element Design Layout */
+.profile-branding-bar {
+    max-width: 430px;
+    margin: 20px auto 0 auto;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.avatar-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #24292e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-text strong {
+    font-size: 14px;
+    color: #1a202c;
+}
+
+.profile-text span {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.global-balance {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0 10px 0;
+    background: #ffffff;
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Master Form Card Containers */
+.game-container {
+    max-width: 480px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.game-container h1 {
+    font-size: 24px;
+    color: #1a202c;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.game-container h2 {
+    font-size: 18px;
+    color: #4a5568;
+    margin-top: 30px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 8px;
+}
+
+.game-container p {
+    color: #718096;
+    line-height: 1.5;
+}
+
+button {
+    font-family: inherit;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Interactive Active Worker Components */
+#mine-btn {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(49, 130, 206, 0.15);
+    margin-top: 15px;
+}
+
+#mine-btn:hover {
+    background-color: #2b6cb0;
+}
+
+/* Dynamic List Grid Rows */
+.shop-item {
+    background: #f7fafc;
+    padding: 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-item button {
+    font-size: 13px;
+    padding: 8px 14px;
+    border: none;
+    background-color: #38a169;
+    color: white;
+}
+
+.shop-item button:hover {
+    background-color: #2f855a;
+}
+
+.energy-item button {
+    background-color: #dd6b20;
+}
+
+.energy-item button:hover {
+    background-color: #c05621;
+}
+
+/* Reward Verification Profile Tier System Elements */
+.reward-unlock-card {
+    background: #f7fafc;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-left {
+    flex: 1;
+}
+
+.reward-unlock-card h3 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    color: #2d3748;
+}
+
+.unlock-desc {
+    font-size: 13px;
+    margin: 0 0 6px 0 !important;
+    color: #718096;
+}
+
+.unlock-price {
+    font-size: 12px;
+    margin: 0;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+.unlock-action-btn {
+    border: 1px solid #cbd5e0;
+    background: white;
+    color: #4a5568;
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.unlock-action-btn:hover {
+    background: #edf2f7;
+    color: #1a202c;
+}
+
+.reward-unlock-card.unlocked-tier {
+    background: #f0fff4;
+    border-color: #c6f6d5;
+}
+
+.reward-unlock-card.unlocked-tier .unlock-action-btn {
+    display: none;
+}
+
+.major-tier {
+    background: #f7fafc;
+    border: 2px dashed #e2e8f0;
+}
+
+.major-tier.unlocked-tier {
+    background: #ebf8ff;
+    border: 2px solid #bee3f8;
+}
+
+.hidden-link-box {
+    display: none;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+    margin-top: 10px;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.hidden-link-box a {
+    color: #3182ce;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hidden-link-box a:hover {
+    text-decoration: underline;
+}
+
+/* Code Redeeming Components Group Setup */
+.giftcard-card {
+    background: #f7fafc;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-top: 12px;
+}
+
+.giftcard-card p {
+    font-size: 13px;
+    margin: 0 0 12px 0;
+}
+
+.giftcard-input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.giftcard-input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+#redeem-code-btn {
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+#giftcard-status-msg {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Performance Time Mini Challenges Components layout */
+.arcade-card {
+    background: #f7fafc;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.energy-display {
+    font-weight: 600;
+    color: #dd6b20;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#timer-display {
+    font-size: 54px;
+    font-family: Monaco, Consolas, monospace;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 15px 0;
+}
+
+#arcade-action-btn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#arcade-status {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Shared Functional System Wrappers */
+.stats-section {
+    background: #f7fafc;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.stats-section p {
+    margin: 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+.main-header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.nav-tabs .tab-btn {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.nav-tabs .tab-btn.active {
+    background-color: #38a169;
+    color: white;
+    border-color: #38a169;
+}
+
+/* Minecraft green theme active color */
+
+.profile-branding-bar {
+    max-width: 430px;
+    margin: 20px auto 0 auto;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.avatar-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #24292e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.profile-text strong {
+    font-size: 14px;
+}
+
+.profile-text span {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+.global-balance {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0 10px 0;
+    background: #ffffff;
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.game-container {
+    max-width: 480px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.game-container h1 {
+    font-size: 24px;
+    color: #1a202c;
+    text-align: center;
+}
+
+/* ⛏️ THE INTERACTIVE MINING CONTAINER CURSOR WORKSPACE */
+.mining-zone-box {
+    /* Instantly fallback to crosshair selector pointer if file asset returns 404 */
+    cursor: url('assets/wooden_pickaxe.png') 16 16, crosshair;
+    user-select: none;
+}
+
+/* Slide Selection Component Row styles */
+.ore-slider-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.slide-nav-btn {
+    background: #38a169;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.slide-nav-btn:hover {
+    background: #2f855a;
+}
+
+.selected-ore-title {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+/* Central Action Hit Target */
+.mining-field-core {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.ore-image-wrapper {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: inherit;
+}
+
+.ore-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.05s ease;
+    image-rendering: pixelated;
+}
+
+.ore-image-wrapper img:active {
+    transform: scale(0.92);
+}
+
+/* Click bounce effect */
+
+/* Mine HP Indicator Bar layout matrix */
+.hp-bar-container {
+    background: #edf2f7;
+    width: 80%;
+    height: 12px;
+    border-radius: 6px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #cbd5e0;
+}
+
+.hp-bar-fill {
+    background: #e53e3e;
+    height: 100%;
+    transition: width 0.1s ease;
+}
+
+.shop-item,
+.reward-unlock-card {
+    background: #f7fafc;
+    padding: 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-item button,
+.unlock-action-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+    border: none;
+    background-color: #38a169;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.shop-item button.unlocked-btn {
+    background-color: #cbd5e0;
+    color: #4a5568;
+    cursor: default;
+}
+
+.hidden-link-box {
+    display: none;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.hidden-link-box a {
+    color: #3182ce;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.stats-section {
+    background: #f7fafc;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+/* --- 💎 FLOATING DYNAMIC PARTICLE ELEMENTS --- */
+.mining-field-core {
+    position: relative;
+    /* Acts as the coordinate center for absolute floating nodes */
+}
+
+.click-particle {
+    position: absolute;
+    pointer-events: none;
+    /* Prevents floating elements from intercepting mouse clicks */
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffeb3b;
+    /* Yellow damage number color */
+    animation: floatUpAndFadeOut 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    z-index: 10;
+}
+
+@keyframes floatUpAndFadeOut {
+    0% {
+        transform: translate(-50%, -50%) scale(0.6) translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.1) translateY(-60px) rotate(15deg);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftLabs | jackcodelab Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Anti-Cheat Overlay Interceptor -->
+    <div id="cheat-screen" class="cheat-overlay">
+        <div class="cheat-box">
+            <h2>⚠️ Security Protocol Breach</h2>
+            <p>Memory manipulation detected. Mismatched internal hashes.</p>
+            <button onclick="location.reload()">Reset Session</button>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="logo">⛏️ CraftLabs</div>
+        <nav class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('mining-tab')">Mine</button>
+            <button class="tab-btn" onclick="switchTab('shop-tab')">Armory Shop</button>
+            <button class="tab-btn" onclick="switchTab('rewards-tab')">Socials & Collab</button>
+            <button class="tab-btn" onclick="switchTab('minigame-tab')">Arcade Mode</button>
+        </nav>
+    </header>
+
+    <div class="profile-branding-bar">
+        <div class="avatar-icon">J</div>
+        <div class="profile-text">
+            <div class="github-sync-box">
+                <!-- Check this specific line inside your profile bar ribbon -->
+                   <Strong>Wahab</Strong>
+                   <span>Developer</span>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="global-balance">
+        Your Balance: <span id="global-diamond-count">0</span> 💎
+    </div>
+
+    <!-- TAB 1: MINING WORKSPACE -->
+    <div id="mining-tab" class="tab-content active-content">
+        <div class="game-container mining-zone-box" id="interactive-mining-zone">
+            <h1>Resource Extractor</h1>
+
+            <div class="ore-slider-navigation">
+                <button class="slide-nav-btn" onclick="changeOreSelection(-1)">◀</button>
+                <div class="selected-ore-title" id="current-ore-name">Coal Ore</div>
+                <button class="slide-nav-btn" onclick="changeOreSelection(1)">▶</button>
+            </div>
+
+            <div class="mining-field-core">
+                <div class="ore-image-wrapper" id="ore-hit-target">
+                    <img id="render-ore-img" src="assets/coal_ore.png" alt="Ore node">
+                </div>
+
+                <div class="hp-bar-container">
+                    <div class="hp-bar-fill" id="ore-hp-fill" style="width: 100%;"></div>
+                </div>
+                <p style="text-align:center; font-size:12px; margin-top:8px;" id="hp-numerical-text">HP: 5/5</p>
+            </div>
+
+            <div class="stats-section">
+                <p>Equipped: <span id="equipped-pick-name">Wooden Pickaxe</span> (+<span
+                        id="equipped-pick-power">1</span> Dmg)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 2: SEPARATED SHOP -->
+    <div id="shop-tab" class="tab-content">
+        <div class="game-container">
+            <h1>Armory & Tools Upgrades</h1>
+            <p>Spend your gathered materials to forge better tools. Higher-tier materials break stone faster.</p>
+            <div id="dynamic-shop-container"></div>
+        </div>
+    </div>
+
+    <!-- TAB 3: SOCIAL CONNECTIONS -->
+    <div id="rewards-tab" class="tab-content">
+        <div class="game-container">
+            <h1>Jackcodelab Ecosystem</h1>
+            <div id="dynamic-rewards-container"></div>
+        </div>
+    </div>
+
+    <!-- TAB 4: ARCADE TRAINING -->
+    <div id="minigame-tab" class="tab-content">
+        <div class="game-container">
+            <h1>Reaction Timer Challenge</h1>
+            <div class="arcade-card">
+                <div id="timer-display">0.00</div>
+                <button id="arcade-action-btn"
+                    style="background:#e53e3e; color:white; padding:12px; width:100%; border:none; margin-top:10px;">START</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop-data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
