@@ -26,7 +26,7 @@ function saveGameProgress() {
         diamonds: diamonds,
         currentOreIndex: currentOreIndex,
         equippedPickaxeId: activePickaxe.id,
-        unlockedPickaxeIds: PICKAXE_DATA.filter(p => p.unlocked).map(p => p.id),
+        unlockedPickaxeIds: PICKAXE_DATA.filter(p => p.unlocked).map(p => p.id)
     };
     localStorage.setItem('jackcodelab_craftlabs_save', JSON.stringify(saveStateData));
 }
@@ -44,7 +44,7 @@ function loadGameProgress() {
         const parsedSave = JSON.parse(rawData);
         diamonds = parsedSave.diamonds || 0;
         currentOreIndex = parsedSave.currentOreIndex || 0;
-
+        
         if (parsedSave.unlockedPickaxeIds) {
             PICKAXE_DATA.forEach(pick => {
                 if (parsedSave.unlockedPickaxeIds.includes(pick.id)) {
@@ -52,7 +52,7 @@ function loadGameProgress() {
                 }
             });
         }
-
+        
         const previouslyEquipped = PICKAXE_DATA.find(p => p.id === parsedSave.equippedPickaxeId);
         activePickaxe = previouslyEquipped || PICKAXE_DATA[0];
         currentOreHP = ORE_DATA[currentOreIndex].hp;
@@ -215,79 +215,10 @@ function updateDisplay() {
     }
 }
 
-// --- FIXED GITHUB PROFILE PROFILE CONNECT ENGINE ---
-function syncGitHubProfile() {
-    const inputField = document.getElementById('gh-username-input');
-
-    if (!inputField) {
-        console.error("HTML Error: Could not find an input field with id='gh-username-input'");
-        alert("Developer configuration error! Check your browser console.");
-        return;
-    }
-
-    const username = inputField.value.trim();
-    if (!username) {
-        alert("Please type a username first!");
-        return;
-    }
-
-    // FIX: Swapped to correct dynamic template literals targeting public developer user objects
-    fetch(`https://github.com{username}`)
-        .then(response => {
-            if (!response.ok) throw new Error("User profile endpoint returned 404");
-            return response.json();
-        })
-        .then(data => {
-            const avatarEl = document.querySelector('.avatar-icon');
-            const nameEl = document.querySelector('.profile-text strong');
-            const bioEl = document.querySelector('.profile-text span');
-
-            if (avatarEl) avatarEl.innerHTML = `<img src="${data.avatar_url}" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">`;
-            if (nameEl) nameEl.textContent = data.login;
-            if (bioEl) bioEl.textContent = data.bio || "Active Miner";
-
-            localStorage.setItem('synced_github_user', data.login);
-            saveGameProgress();
-            alert(`Successfully synchronized profile card for: ${data.login}!`);
-        })
-        .catch(err => {
-            console.error("API Fetch Error Details:", err);
-            alert("Could not find that GitHub profile! Double-check spelling or network connectivity.");
-        });
-}
-
 // Initial Bootstrap Startup Sequences
-loadGameProgress();
+loadGameProgress(); 
 updateDisplay();
 renderDynamicViews();
 
 currentOreNameEl.textContent = ORE_DATA[currentOreIndex].name;
 renderOreImg.src = ORE_DATA[currentOreIndex].img;
-// --- ✨ DYNAMIC CLICK PARTICLE FEEDBACK GENERATOR ---
-oreHitTarget.addEventListener('mousedown', (event) => {
-    if (!runSecurityAudit()) return;
-
-    // Get the relative positioning inside the ore container box bounding client
-    const boundingBox = oreHitTarget.getBoundingClientRect();
-    const relativeX = event.clientX - boundingBox.left;
-    const relativeY = event.clientY - boundingBox.top;
-
-    // Create a new span container to act as our particle node element
-    const particle = document.createElement('span');
-    particle.className = 'click-particle';
-
-    // Position the particle exactly where the mouse pointer registered the hit
-    particle.style.left = `${relativeX}px`;
-    particle.style.top = `${relativeY}px`;
-
-    // Display the exact amount of damage your pickaxe dealt to the ore block
-    particle.textContent = `-${activePickaxe.power}`;
-
-    // Append to the inner target area window
-    oreHitTarget.appendChild(particle);
-
-    // Completely clear out the node block once its animation cycle completes to keep memory light
-    setTimeout(() => {
-        particle.remove();
-    }, 600);
-});
